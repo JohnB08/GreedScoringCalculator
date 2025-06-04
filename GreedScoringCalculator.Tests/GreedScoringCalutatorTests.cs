@@ -1,5 +1,6 @@
 namespace GreedScoringCalculator.Tests;
 
+using GreedScoringCalculator.App.GreedScoringCalculator;
 public class GreedScoringCalculatorTests
 {
     [Fact]
@@ -15,9 +16,9 @@ public class GreedScoringCalculatorTests
     public void TestIfScoreIsCorrect(int[] scores, int expected)
     {
         var calculator = new GreedScoringCalculator();
-        var scores = calculator.Calculate(scores);
+        var score = calculator.Calculate(scores);
 
-        Assert.Equal(expected, scores);
+        Assert.Equal(expected, score);
     }
 
     public static TheoryData<object[]> Data =>
